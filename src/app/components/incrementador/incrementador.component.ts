@@ -8,7 +8,7 @@ export class IncrementadorComponent implements OnInit {
 
 
   //recibe como referencia un elemento html
-   @ViewChild('txtProgress') txtProgress: ElementRef;
+   @ViewChild('txtProgress', { static: true }) txtProgress: ElementRef;
 
 
 
