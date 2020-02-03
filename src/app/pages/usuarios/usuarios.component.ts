@@ -85,7 +85,7 @@ export class UsuariosComponent implements OnInit {
       title: '¿Estas seguro?',
       text: 'Estas a punto de borrar a ' + usuario.nombre,
       icon: 'warning',
-      buttons: ["Cancel", true],
+      buttons: ['Cancel', true],
       dangerMode: true,
     })
     .then(borrar => {
