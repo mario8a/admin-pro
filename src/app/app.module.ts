@@ -7,14 +7,16 @@ import { APP_ROUTES } from './app.routes';
 //modulos
 import { PagesModule } from './pages/pages.module';
 
-//componetntes
-import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './login/register.component';
 //temporal
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //servicios
 import { ServiceModule } from './services/service.module';
+import { SharedModule } from './shared/shared.module';
+//componetntes
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './login/register.component';
+import { PagesComponent } from './pages/pages.component';
 
 
 
@@ -22,15 +24,18 @@ import { ServiceModule } from './services/service.module';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PagesComponent,
+    
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule,
+    // PagesModule, // Este se llama de forma dinamica en el routes
     FormsModule,
     ReactiveFormsModule,
-    ServiceModule
+    ServiceModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
